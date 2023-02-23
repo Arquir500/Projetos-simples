@@ -1,0 +1,11 @@
+#frase = str(input('Escreva uma frase: ')).upper().strip()
+#print('A letra A apareceu:', frase.count('A'), 'vezes')
+#print('A letra A apareceu primeiro na posição:', frase.find('A')+1)
+#print('A letra A apareceu uma última vez na posição:', frase.rfind('A')+1)
+
+nome = str(input('Dígite seu nome completo:')).strip()
+n = nome.split()
+u = nome.rsplit()
+print(f"Muito prazer em te conhecer {nome}!")
+print(f"Seu primeiro nome é ",n[0])
+print(f"seu último nome é",u[-1])

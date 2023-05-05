@@ -29,13 +29,13 @@ def saindo():
     quit()
 
 
-def checar_resposta1():
+def checar_resposta1(janela):
     global segundaResposta
     global segundaPergunta
     global botaoEnviar2
 
     resposta = primeiraResposta.get()
-    if resposta == "Euro":
+    if resposta == "euro":
         resposta_certa1 = Label(janela, text="Correto!")
         resposta_certa1.pack()
 
@@ -60,7 +60,7 @@ def checar_resposta1():
 
 def checar_resposta2():
     resposta2 = segundaResposta.get()
-    if resposta2 == "Júpiter":
+    if resposta2 == "júpiter":
         resposta_certa2 = Label(janela, text="Correto!")
         resposta_certa2.pack()
 
@@ -68,7 +68,7 @@ def checar_resposta2():
         resposta_errada2 = Label(janela, text="Errou!")
         resposta_errada2.pack()
 
-    prosseguirbotao2 = Button(janela, text="Fim!", command=fimdo_jogo)
+    prosseguirbotao2 = Button(janela, text="GO!", command=fimdo_jogo)
     prosseguirbotao2.pack()
 
     fim = Label(janela, text="Obrigado por jogar!")
@@ -78,8 +78,8 @@ def checar_resposta2():
     segundaResposta.destroy()
     botaoEnviar2.destroy()
 
-
 def fimdo_jogo():
+
     fimf = Button(janela, text="fim!", command=quit())
     fimf.pack()
 
@@ -91,6 +91,7 @@ janela.config(background="#2e1230")
 
 boasVindas = Label(janela, text="Bem vindo ao Jogo de Adivinhação!", font=('Arial', 12, 'bold'), fg='green', bg='black')
 boasVindas.pack()
+
 
 startGame = Label(janela, text="Quer jogar?", font=('Arial', 12, 'bold'), fg='green', bg='black')
 startGame.pack()
